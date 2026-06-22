@@ -52,3 +52,16 @@ class Solution(object):
 
 #or 
 
+class Solution(object):
+    def minimumCost(silf,cost):
+        cost.sort(reverse=True)
+        price=0
+        for i ,costs in enumerate(cost):
+            if (i+1)%3 !=0:
+                price += costs
+            if not costs:
+                return 0
+        return price
+        
+
+    
