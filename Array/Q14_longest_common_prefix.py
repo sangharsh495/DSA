@@ -26,11 +26,11 @@ strs[i] consists of only lowercase English letters if it is non-empty.
 class Solution(object):
     def longestCommonPrefix(self, strs):
         if not strs:
-            retirn 0
+            return ""
         prefix=strs[0]
         for i , str in enumerate(strs):
             while not str.startswith(prefix):
-                prefix=prefix(:-1)
+                prefix=prefix[:-1]
                 if not prefix:
-                    return 0
-                    
+                    return ""
+        return prefix
