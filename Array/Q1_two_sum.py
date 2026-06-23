@@ -30,7 +30,7 @@ Constraints:
 Only one valid answer exists.
 
 """
-
+# using brute force
 
 class Solution(object):
     def twoSum(self, nums, target):
@@ -39,3 +39,14 @@ class Solution(object):
             for j in range(i+1 , len(nums)):
                 if nums[i] + nums[j] == target:
                     return (i,j)
+
+#or  using hashmap
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        hm={}
+        for i in range(len(nums)):
+            need = target - nums[i]
+            if need in hm:
+                return (hm[need],i)
+            hm[nums[i]] = i
